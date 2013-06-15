@@ -11,5 +11,11 @@
   },
   "repository": "",
   "author": "Chris Jones <chris@jonezy.org>",
-  "license": "BSD"
+  "license": "BSD",
+  "dependencies": {
+    "commander": "0.6.1"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  }
 }
