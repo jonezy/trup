@@ -9,13 +9,14 @@
   "scripts": {
     "test": "test/*.js"
   },
-  "repository": "",
+  "repository": "https://github.com/jonezy/trup",
   "author": "Chris Jones <chris@jonezy.org>",
   "license": "BSD",
   "dependencies": {
-    "commander": "0.6.1"
+    "commander": "0.6.1",
+    "fs-extra": ">=0.6.1"
   },
   "devDependencies": {
-    "mocha": "*"
+    "mocha":">=1.10.0"
   }
 }
