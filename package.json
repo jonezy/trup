@@ -1,0 +1,15 @@
+{
+  "name": "trup",
+  "version": "0.0.0",
+  "description": "ttc route updater: downloads ttc route data from nextbus.com",
+  "main": "lib/trup.js",
+  "bin":{
+    "trup":"bin/trup"
+  },
+  "scripts": {
+    "test": "test/*.js"
+  },
+  "repository": "",
+  "author": "Chris Jones <chris@jonezy.org>",
+  "license": "BSD"
+}
