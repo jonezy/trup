@@ -11,7 +11,7 @@ describe("trup", function() {
   describe("with default arguments", function() {
     var worker;
     beforeEach(function(done) {
-      worker = new trup(testRoot, null, done);
+      worker = new trup({'dir': testRoot}, done);
     });
 
     afterEach(function(done) {
@@ -21,8 +21,8 @@ describe("trup", function() {
       });
     });
 
-    it("should create with error", function() {
-      assert.throws(function() { var worker = new trup(); },  Error);
+    it("should create without error", function() {
+      assert.doesNotThrow(function() { var worker = new trup(); },  Error);
     });
 
     it("should create the out directory", function(done) {
@@ -48,11 +48,11 @@ describe("trup", function() {
   describe("with custom opts", function() {
     var worker;
     beforeEach(function(done) {
-      worker = new trup(testRoot, {"out": customOut}, done);
+      worker = new trup({'agency':'guelph',"out": customOut, 'dir': testRoot}, done);
     });
 
     afterEach(function(done) {
-      fs.remove(customOut, function(err) {
+      fs.remove(path.join(testRoot, customOut), function(err) {
         if(err) console.log(err);
         done();
       });
@@ -63,6 +63,15 @@ describe("trup", function() {
         assert(exists, 'the custom out directory was not created');
         done();
       });
+    });
+
+    it("should have custom directory", function() {
+      assert(worker.dir, testRoot);
+
+    });
+    it("should have custom agency", function() {
+      assert(worker.agency, 'guelph');
+
     });
   });
 });
