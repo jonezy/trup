@@ -1,6 +1,6 @@
 {
   "name": "trup",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "ttc route updater: downloads ttc route data from nextbus.com",
   "main": "lib/trup.js",
   "bin":{
@@ -14,7 +14,8 @@
   "license": "BSD",
   "dependencies": {
     "commander": "0.6.1",
-    "fs-extra": ">=0.6.1"
+    "fs-extra": ">=0.6.1",
+    "async": "0.1.22"
   },
   "devDependencies": {
     "mocha":">=1.10.0"

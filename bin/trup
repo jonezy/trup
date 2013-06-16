@@ -1,15 +1,17 @@
 #!/usr/bin/env node
 
 var program = require('commander');
+var trup = require('../lib/trup');
 
 program
   .version('0.0.0')
 
 
 program
-  .command('update')
+  .command('run')
   .action(function() {
-    console.log('\33 here \33');
+    var worker = new trup(); 
+    worker.run();
 
   });
 
